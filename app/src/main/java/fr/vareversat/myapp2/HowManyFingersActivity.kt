@@ -6,10 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-
-import kotlinx.android.synthetic.main.activity_how_many_fingers.*
 
 class HowManyFingersActivity : AppCompatActivity() {
 
@@ -18,20 +15,11 @@ class HowManyFingersActivity : AppCompatActivity() {
         setContentView(R.layout.activity_how_many_fingers)
     }
 
-    fun play(view: View) {
-        val myEditText = findViewById<EditText>(R.id.edit_text_number)
+    private fun showDices(random: Int) {
+        // Get the first ImageView via his ID
         val imageView1 = findViewById<ImageView>(R.id.image1)
+        // Get the second ImageView via his ID
         val imageView2 = findViewById<ImageView>(R.id.image2)
-        val resultText = findViewById<TextView>(R.id.result)
-        val text = Integer.parseInt(myEditText.text.toString())
-        var random = (1..12).random()
-        if (text == random) {
-            resultText.text = "Yeah! You win! I'm showing " + random.toString()
-            resultText.setTextColor(Color.GREEN)
-        } else {
-            resultText.text = "No! You lost! I'm showing " + random.toString()
-            resultText.setTextColor(Color.RED)
-        }
 
         val image1ID = when (random) {
             1 -> R.drawable.dice1
@@ -61,8 +49,33 @@ class HowManyFingersActivity : AppCompatActivity() {
 
         imageView1.setImageResource(image1ID)
         imageView2.setImageResource(image2ID)
+    }
 
+    private fun showText(random: Int, input: Int) {
+        // Get the TextView via his ID
+        val resultText = findViewById<TextView>(R.id.result)
 
+        if (input == random) {
+            resultText.text = "Yeah! You win! I'm showing " + random.toString()
+            resultText.setTextColor(Color.GREEN)
+        } else {
+            resultText.text = "No! You lost! I'm showing " + random.toString()
+            resultText.setTextColor(Color.RED)
+        }
+    }
+
+    fun play(view: View) {
+        // Get the EditText via his ID
+        val myEditText = findViewById<EditText>(R.id.edit_text_number)
+        // Get the number enter by the player
+        val input = Integer.parseInt(myEditText.text.toString())
+        // Pick a random number
+        val random = (1..12).random()
+
+        // Show the correct dices
+        showDices(random)
+        // Show the correct message
+        showText(random, input)
     }
 
 }
