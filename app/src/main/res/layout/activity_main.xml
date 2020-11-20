@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical">
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Write to LogCat"
+            android:textStyle="bold"
+            android:onClick="writeToLog"
+            android:layout_marginTop="20sp"/>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Toast"
+            android:textStyle="bold"
+            android:onClick="showToastMessage"
+            android:layout_marginTop="20sp"/>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show XML Toast"
+            android:textStyle="bold"
+            android:onClick="showXMLToastMessage"
+            android:layout_marginTop="20sp"/>
+
+    <EditText android:id="@+id/my_edit_text"
+            android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Something will be written here"
+              android:textSize="32sp"
+              android:textAlignment="center"
+              android:gravity="center_horizontal"/>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Write to edit text"
+            android:textStyle="bold"
+            android:onClick="writeToEditText"
+            android:layout_marginTop="20sp"/>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show finger game"
+            android:textStyle="bold"
+            android:onClick="showFingerGame"
+            android:layout_marginTop="20sp"/>
+
+</LinearLayout>
