@@ -56,4 +56,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, HowManyFingersActivity::class.java)
         startActivity(intent)
     }
+
+    fun showBMI(view: View) {
+        val intent = Intent(this, BMIActivity::class.java)
+        startActivity(intent)
+    }
 }

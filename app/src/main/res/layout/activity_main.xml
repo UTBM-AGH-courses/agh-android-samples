@@ -47,4 +47,11 @@
             android:onClick="showFingerGame"
             android:layout_marginTop="20sp"/>
 
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show BMI"
+            android:textStyle="bold"
+            android:onClick="showBMI"
+            android:layout_marginTop="20sp"/>
+
 </LinearLayout>
