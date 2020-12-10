@@ -54,4 +54,12 @@
             android:onClick="showBMI"
             android:layout_marginTop="20sp"/>
 
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show calculator"
+            android:textStyle="bold"
+            android:onClick="showCalculator"
+            android:layout_marginTop="20sp"/>
+
 </LinearLayout>

@@ -4,7 +4,9 @@
     <string name="finger_title">Type a number of fingers you think Im showing</string>
     <string name="finger_play">Type a number of fingers you think Im showing</string>
     <string name="title_activity_bmi">Compute your BMI</string>
+    <string name="title_activity_calculator">Calculator</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="error_string">Error</string>
 </resources>
