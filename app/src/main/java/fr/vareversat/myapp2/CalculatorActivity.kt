@@ -87,7 +87,6 @@ class CalculatorActivity : AppCompatActivity() {
 
     fun clean(view: View) {
         edit_text_input.text = ""
-        edit_text_input.text = ""
     }
 
     fun computeCalculus(view: View) {
