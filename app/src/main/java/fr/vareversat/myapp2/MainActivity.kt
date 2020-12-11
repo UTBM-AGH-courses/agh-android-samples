@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun writeToLog(view: View) {
-        Log.i("Alo", "Alo");
+        Log.i("Alo", "Alo")
     }
 
     fun showToastMessage(view: View) {
@@ -64,6 +64,11 @@ class MainActivity : AppCompatActivity() {
 
     fun showCalculator(view: View) {
         val intent = Intent(this, CalculatorActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun showList(view: View) {
+        val intent = Intent(this, ListActivity::class.java)
         startActivity(intent)
     }
 }
