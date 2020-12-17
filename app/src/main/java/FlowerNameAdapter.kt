@@ -36,10 +36,11 @@ class FlowerNameAdapter(
         flowerNameTextView.text = getItem(p0).toString()
         if (p0 % 2 == 0) {
             flowerNameTextView.background =
-                ContextCompat.getDrawable(context, android.R.color.holo_green_light)
+                ContextCompat.getDrawable(context, android.R.color.darker_gray)
+
         } else {
             flowerNameTextView.background =
-                ContextCompat.getDrawable(context, android.R.color.darker_gray)
+                ContextCompat.getDrawable(context, android.R.color.holo_green_light)
         }
         flowerImageView.setImageResource(flowerImages[p0])
         return itemView
