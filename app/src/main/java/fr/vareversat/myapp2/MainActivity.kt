@@ -1,5 +1,6 @@
 package fr.vareversat.myapp2
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
@@ -12,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,5 +72,24 @@ class MainActivity : AppCompatActivity() {
     fun showList(view: View) {
         val intent = Intent(this, ListActivity::class.java)
         startActivity(intent)
+    }
+
+    fun showValue(view: View) {
+        val intent = Intent(this, GetValueActivity::class.java)
+        intent.putExtra("valueToBePassed", my_edit_text.text.toString())
+        startActivity(intent)
+    }
+
+    fun spRight(view: View) {
+        val pref = getPreferences(Context.MODE_PRIVATE)
+        val editor = pref.edit()
+        editor.putString("key_text", sp_value.text.toString())
+        editor.apply()
+
+    }
+
+    fun spRead(view: View) {
+        val pref = getPreferences(Context.MODE_PRIVATE)
+        sp_value.setText(pref.getString("key_text", ""))
     }
 }
